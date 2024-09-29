@@ -43,9 +43,7 @@ def editor(request):
  
     return render(request, 'editor.html', context)
  
-# create delete notes page
- 
- 
+# delete notes page
 @login_required(login_url='/login/')
 def delete_note(request, docid):
     note = Note.objects.get(pk=docid, user=request.user)
@@ -73,8 +71,7 @@ def login_page(request):
             messages.error(request, "Something went wrong")
             return redirect('/register/')
     return render(request, "login.html")
- 
- 
+
 # register page for user
 def register_page(request):
     if request.method == "POST":
@@ -94,8 +91,7 @@ def register_page(request):
             messages.error(request, "Something went wrong")
             return redirect('/register')
     return render(request, "register.html")
- 
- 
+
 # logout function
 def custom_logout(request):
     logout(request)    

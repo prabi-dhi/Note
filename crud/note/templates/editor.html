@@ -28,8 +28,7 @@
             font-size: 45px;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
-          "
-          >Notes</a>
+          ">Notes</a>
         
         <a
           href="{% url 'logout' %}"
@@ -62,16 +61,14 @@
                 font-size: 20px;
                 font-weight: bold;
                 font-family: 'Times New Roman', Times, serif;
-              "
-            >
+              ">
               Notes List
             </p>
             <ul class="menu-list">
                 {% for doc in notes %}
               <li>
                 <a href="{% url 'editor' %}?docid={{ doc.id }}"
-                  >{{ doc.title }}</a
-                >
+                  >{{ doc.title }}</a>
               </li>
               {% endfor %} 
             </ul>
@@ -92,8 +89,7 @@
                     font-size: 22px;
                     font-family: 'Times New Roman', Times, serif;
                   "
-                  >Title</label
-                >
+                  >Title</label>
                 <div class="control">
                   <input
                     type="text"
@@ -111,8 +107,7 @@
                   class="label"
                   style="
                     font-size: 20px;
-                    font-family: 'Times New Roman', Times, serif;
-                  "
+                    font-family: 'Times New Roman', Times, serif; "
                   >Content</label>
                 <div class="control">
                   <textarea
